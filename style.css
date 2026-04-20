@@ -1,62 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-.navbar-brand {
-    font-size: 1.5rem !important;
+nav {
+    background: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+nav a:hover {
+    color: #0056b3;
 }
 
-.table-hover tbody tr:hover {
-    background-color: rgba(0,123,255,.075);
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Placeholder Gambar */
-.image-placeholder {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-    background-size: 400% 400%;
-    animation: gradientShift 3s ease infinite;
-    border-radius: 15px 15px 0 0;
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
-#result {
-    animation: slideIn 0.5s ease;
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .btn {
-    border-radius: 25px;
-    padding: 10px 25px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: #007bff;
+    color: white;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.media-item {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.image-placeholder {
+    width: 200px;
+    height: 150px;
+    background: #e9ecef;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    border-radius: 8px;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+#result.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
 }

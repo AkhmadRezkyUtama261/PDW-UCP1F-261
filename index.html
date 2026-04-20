@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community - Halaman Utama</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Tech Community</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="index.html">Beranda</a>
+                <a class="nav-link" href="form.html">Daftar Anggota</a>
+                <a class="nav-link" href="gallery.html">Multimedia</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1 class="display-4 fw-bold text-primary">Tech Community</h1>
+                <p class="lead">Komunitas untuk berbagi pengetahuan dan pengalaman di bidang Teknologi Informasi</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h3 class="mb-4">Daftar Anggota</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="memberTable">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Email</th>
+                                <th>Bidang Minat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="memberList">
+                            <!-- Data akan dimuat oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

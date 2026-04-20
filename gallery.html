@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community - Multimedia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Tech Community</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link" href="form.html">Daftar Anggota</a>
+                <a class="nav-link active" href="gallery.html">Multimedia</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Konten Multimedia</h2>
+        
+        <div class="row g-4">
+            <!-- Placeholder Gambar dengan Ikon -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="image-placeholder bg-gradient text-white d-flex align-items-center justify-content-center" style="height: 250px;">
+                        <i class="bi bi-laptop fs-1"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Tech Visual</h6>
+                        <button class="btn btn-primary" onclick="changeVisual()">Ganti Visual</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video YouTube -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tech Video" allowfullscreen class="shadow"></iframe>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6>Video Teknologi</h6>
+                        <p class="small text-muted">YouTube Embed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="p-4 text-center bg-light rounded mb-3">
+                        <i class="bi bi-music-note-beamed fs-1 text-primary"></i>
+                    </div>
+                    <audio id="techAudio" class="w-100 mb-3" controls>
+                        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBS/9/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBS/9/" type="audio/wav">
+                        Browser Anda tidak mendukung audio.
+                    </audio>
+                    <div class="card-body text-center">
+                        <button class="btn btn-success" onclick="toggleAudio()">
+                            <i class="bi bi-play-fill"></i> Play/Pause
+                        </button>
+                        <br><small class="text-muted">Audio Demo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
